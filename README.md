@@ -1,4 +1,4 @@
-# How to install Caffe - The framework for Deep Learning on Ubuntu 18.04 with CUDA 10.1
+# How to install Caffe - The framework for Deep Learning on Ubuntu 18.04 LTS with CUDA 10.1
 This repository is just a guide to install the Framework Caffe for Deep Learning in a straight forward way.
 
 
@@ -78,4 +78,6 @@ UTILIZAR O COMANDO ABAIXO:
     - make runtest
 12. Executar o comando export abaixo:
     - export PYTHONPATH=/home/mfcs/caffe/python:$PYTHONPATH
+13. Executar o pycaffe.py
+    - No diretório raiz do projeto do Caffe, executar o seguinte comando: **make pycaffe** 
 
