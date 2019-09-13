@@ -3,12 +3,14 @@ This repository is just a guide to install the Framework Caffe for Deep Learning
 
 
 ### Comando para monitorar o uso da GPU no terminal
+```
 - *watch -n 1 nvidia-smi*
-
+```
 ### Arquivo contendo as bibliotecas para serem instaladas utilizadas pelo Caffe. A instalação é feita utilizando-se o arquivo **caffe_requirements.txt**. Utilize o comando abaixo para executar a instalação:
+```
 - Python 2: *pip install -r caffe_requirements.txt*
 - Python 3: *pip3 install -r caffe_requirements.txt*
-
+```
 ### Instruções para compilação do Caffe *from source*
 
 1. Ajustar e Executar 
