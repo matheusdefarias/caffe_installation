@@ -2,35 +2,19 @@
 This repository is just a guide to install the Framework Caffe for Deep Learning in a straight forward way.
 
 
-### Comando para monitorar a GPU no terminal
-watch -n 1 nvidia-smi
+### Comando para monitorar o uso da GPU no terminal
+- *watch -n 1 nvidia-smi*
 
-
-
-### Arquivo caffe_requirements.txt
-UTILIZAR O COMANDO ABAIXO:
-##### - pip3 install -r caffe_requirements.txt
-
-##### - matplotlib==3.1.1
-##### - numpy==1.17.2
-##### - opencv-python==4.1.1.26
-##### - Pillow==6.1.0
-##### - protobuf==3.9.1
-##### - scikit-image==0.15.0
-##### - scikit-learn==0.21.3
-##### - scipy==1.3.1
-
-
-
+### Arquivo contendo as bibliotecas para serem instaladas utilizadas pelo Caffe. A instalação é feita utilizando-se o arquivo **caffe_requirements.txt**. Utilize o comando abaixo para executar a instalação:
+- Python 2: *pip install -r caffe_requirements.txt*
+- Python 3: *pip3 install -r caffe_requirements.txt*
 
 ### Instruções para compilação do Caffe
-
 
 1. Ajustar e Executar 
     - Em Software & Updates, na aba “Ubuntu Software” marcar o check box “source code” e em Download from escolher “Main server”. Na aba Developer Options, marcar o check box “Pre-released updates”. Na aba “Additional Drivers” selecionar o driver mais atual da placa de vídeo e clicar em “Apply changes”.
     - sudo apt update
     - sudo apt upgrade
-
 
 2. Instalar CUDA Toolkit. Baixar do site da NVidia no formato deb(local).
     - CUDA Toolkit: https://developer.nvidia.com/cuda-toolkit
