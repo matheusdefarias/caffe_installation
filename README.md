@@ -9,7 +9,7 @@ This repository is just a guide to install the Framework Caffe for Deep Learning
 - Python 2: *pip install -r caffe_requirements.txt*
 - Python 3: *pip3 install -r caffe_requirements.txt*
 
-### Instruções para compilação do Caffe
+### Instruções para compilação do Caffe *from source*
 
 1. Ajustar e Executar 
     - Em Software & Updates, na aba “Ubuntu Software” marcar o check box “source code” e em Download from escolher “Main server”. Na aba Developer Options, marcar o check box “Pre-released updates”. Na aba “Additional Drivers” selecionar o driver mais atual da placa de vídeo e clicar em “Apply changes”.
