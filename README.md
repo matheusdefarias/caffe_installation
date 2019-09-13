@@ -1,4 +1,4 @@
-<p><img src="caffe.png" align="left" width="170" height="90" /></p>
+<p><a hre="https://caffe.berkeleyvision.org"><img src="caffe.png" align="left" width="170" height="90" /></a></p>
 </br>
 </br>
 </br>
