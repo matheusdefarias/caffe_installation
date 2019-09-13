@@ -10,7 +10,7 @@
 ### Comando para monitorar o uso da GPU no terminal:
 > *watch -n 1 nvidia-smi*
 
-### Arquivo contendo as bibliotecas utilizadas pelo Caffe e que devem ser instaladas. A instalação é feita utilizando o arquivo **caffe_requirements.txt**. Para executar a instalação, execute um dos comandos abaixo de acordo com a versão do Python:
+### Arquivo contendo as bibliotecas utilizadas pelo Caffe e que devem ser instaladas. A instalação é feita utilizando o arquivo *caffe_requirements.txt*. Para executar a instalação, execute um dos comandos abaixo de acordo com a versão do Python:
 ```
 Python 2: pip install -r caffe_requirements.txt
 Python 3: pip3 install -r caffe_requirements.txt
