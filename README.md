@@ -37,14 +37,12 @@ Python 3: pip3 install -r caffe_requirements.txt
 4. **Acessar https://caffe.berkeleyvision.org/install_apt.html**
 
 5. **Executar:**
-    ´´´
-    sudo apt build-dep caffe-cpu        # dependencies for CPU-only version
-    sudo apt build-dep caffe-cuda       # dependencies for CUDA version
-    ´´´
-    > Caso dê problema com overwrite do cublas.h executar o comando abaixo:
-    ´´´
-    sudo dpkg -i --force-overwrite /var/cache/apt/archives/cuda-cublas-9-1_9.1.85.3-1_amd64.deb You need to remove that package
-    ´´´
+    
+    - sudo apt build-dep caffe-cpu        # dependencies for CPU-only version
+    - sudo apt build-dep caffe-cuda       # dependencies for CUDA version
+    
+    - Caso dê problema com overwrite do cublas.h executar o comando abaixo:
+    > sudo dpkg -i --force-overwrite /var/cache/apt/archives/cuda-cublas-9-1_9.1.85.3-1_amd64.deb    
 
 6. **Baixar o projeto do Caffe do GitHub da Berkeley**
     > Repositório: https://github.com/BVLC/caffe
