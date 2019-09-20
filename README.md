@@ -33,7 +33,7 @@ Python 3: pip3 install -r caffe_requirements.txt
       - *deb http://ftp.cn.debian.org/debian sid main contrib non-free*
       - *deb-src http://ftp.cn.debian.org/debian sid main contrib non-free*
 
-4. **Access:** <span><a href="https://caffe.berkeleyvision.org/install_apt.html" target="_blank">Caffe Ubuntu Installation</a></span>
+4. **Access this link:** <span><a href="https://caffe.berkeleyvision.org/install_apt.html" target="_blank">Caffe Ubuntu Installation</a></span>
 
 5. **Choose and execute:**
     ```
@@ -44,11 +44,11 @@ Python 3: pip3 install -r caffe_requirements.txt
     - If you receive a file replacement error related to the cublas.h file, run the command below:
       - sudo dpkg -i --force-overwrite /var/cache/apt/archives/cuda-cublas-9-1_9.1.85.3-1_amd64.deb    
 
-6. **Baixar o projeto do Caffe do GitHub da Berkeley**
-    > Repositório: https://github.com/BVLC/caffe
+6. **Download the Caffe Project on Berkeley's GitHub link below:**
+    > Repository: <span><a href="https://github.com/BVLC/caffe" target="_blank">Caffe GitHub</a></span>
 
-7. **Seguir instruções de compilação e de testes**
-    > https://caffe.berkeleyvision.org/installation.html#compilation
+7. **Follow the compilation and test instructions.**
+    > <span><a href="https://caffe.berkeleyvision.org/installation.html#compilation" target="_blank">Caffe compilation and test instructions</a></span>
 
 8. **Configurar o arquivo Makefile.config**
     - Descomentar USE_CUDNN := 1 (Linha 5) 
