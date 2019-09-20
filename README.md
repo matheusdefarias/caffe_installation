@@ -25,7 +25,7 @@ Python 3: pip3 install -r caffe_requirements.txt
 2. **Install the CUDA Toolkit. Download it from Nvidia website in the .run(local) format**.
     - CUDA Toolkit: <span><a href="https://developer.nvidia.com/cuda-toolkit" target="_blank">CUDA Toolkit</a></span>
     - Direct link to CUDA 10.1 version: <span><a href="https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal">CUDA 10.1 version</a></span>
-    - Following the installation instructions, in the terminal window when the installation steps starts, **unselect** the option to install the graphics card's driver. This is necessary because the graphics card's driver is already configured and installed on Software & Updates.A guide to this process of installation can be found in the following link:<span><a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions"> Guide to installation(Section 3.6)</a></span>
+    - Following the installation instructions, in the terminal window when the installation steps starts, **unselect** the option to install the graphics card's driver. This is necessary because the graphics card's driver is already configured and installed on Software & Updates.A guide to this process of installation can be found in the following link:<span><a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions"> Guide to installation</a></span>
 
 3. **Edit the *source.list* file adding the following deb-source lines in the end of the file:**
     - Command to access the *source.list* file: *sudo nano /etc/apt/sources.list*
@@ -60,16 +60,21 @@ Python 3: pip3 install -r caffe_requirements.txt
     - Incluir as seguintes linhas nas linhas 97 e 98:
     - INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
     - LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/
+    
 9. **Instalar OpenBlas**
     - sudo apt install liblapack-dev liblapack3 libopenblas-base libopenblas-dev
+    
 10. **Instalar o python-numpy**
     - sudo apt-get install python-numpy
+    
 11. **Executar os comandos para compilação e teste:**
     - make all -j8
     - make test
     - make runtest
+    
 12. **Executar o comando export abaixo:**
     - export PYTHONPATH=/home/mfcs/caffe/python:$PYTHONPATH
+    
 13. **Executar o pycaffe.py**
     - No diretório raiz do projeto do Caffe, executar o seguinte comando: **make pycaffe** 
     
