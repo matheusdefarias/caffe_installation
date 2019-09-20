@@ -3,46 +3,46 @@
 </br>
 </br>
 
-# Caffe - Deep Learning Framework
-# How to install Caffe on Ubuntu 18.04 LTS with CUDA 10.1.
+# Caffe | Deep Learning Framework - How to install Caffe on Ubuntu 18.04 LTS with CUDA 10.1.
 > This repository is just a guide to install the Framework Caffe for Deep Learning in a straight forward way.
 
-### Comando para monitorar o uso da GPU no terminal:
-> *watch -n 1 nvidia-smi*
-
-### Arquivo contendo as bibliotecas utilizadas pelo Caffe e que devem ser instaladas. A instalação é feita utilizando o arquivo *caffe_requirements.txt*. Para executar a instalação, execute um dos comandos abaixo de acordo com a versão do Python:
+### *caffe_requirements.txt*: File that contains some libraries needed to use Caffe and they must be installed. To execute the installation, run the following commands depending on the version of Python that you are using:
 ```
 Python 2: pip install -r caffe_requirements.txt
 Python 3: pip3 install -r caffe_requirements.txt
 ```
-### Instruções para compilação do Caffe *from source*
+### Instructions to Caffe Compilation *from source*:
 
-1. **Ajustar e Executar** 
-    - Em Software & Updates, na aba “Ubuntu Software” marcar o check box “source code” e em Download from escolher “Main server”. Na aba Developer Options, marcar o check box “Pre-released updates”. Na aba “Additional Drivers” selecionar o driver mais atual da placa de vídeo e clicar em “Apply changes”.
-    - *sudo apt update*
-    - *sudo apt upgrade*
+1. **Adjustments on Linux GPU driver** 
+ - **On Software & Updates**
+    - On the ***Ubuntu Software*** tab mark the check box **source code** and on *Download from* choose **Main server**.
+    - On the ***Developer Options*** tab, mark the check box **Pre-released updates**.
+    - On the ***Additional Drivers*** tab, select the most recent graphics card driver and then click on **Apply changes**.
+ - **After that, execute the following commands below:** 
+    - sudo apt update
+    - sudo apt upgrade   
 
-2. **Instalar CUDA Toolkit. Baixar do site da NVidia no formato run(local)**.
-    - CUDA Toolkit: https://developer.nvidia.com/cuda-toolkit
-    - Link direto para a versão CUDA 10.1: https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal
-    - Ao seguir as instruções de instalação, quando abrir a janela no terminal para instalar, DESATIVAR a opção de instalar o DRIVER, pois, o driver já foi setado e instalado no Software & Updates.
-    - Tutorial: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions (Seção 3.6)
+2. **Install the CUDA Toolkit. Download it from Nvidia website in the .run(local) format**.
+    - CUDA Toolkit: <span><a href="https://developer.nvidia.com/cuda-toolkit" target="_blank">CUDA Toolkit</a></span>
+    - Direct link to CUDA 10.1 version: <span><a href="https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal">CUDA 10.1 version</a></span>
+    - Following the installation instructions, in the terminal window when the installation steps starts, **unselect** the option to install the graphics card's driver. This is necessary because the graphics card's driver is already configured and installed on Software & Updates.A guide to this process of installation can be found in the following link:<span><a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions"> Guide to installation(Section 3.6)</a></span>
 
-3. **Acessar o arquivo *source.list* e adicionar as linhas de deb-source**
-    - Acessar arquivo: sudo nano /etc/apt/sources.list
-    - Adicionar as linhas abaixo:
-     - *deb http://ftp.cn.debian.org/debian sid main contrib non-free*
-     - *deb-src http://ftp.cn.debian.org/debian sid main contrib non-free*
+3. **Edit the *source.list* file adding the following deb-source lines in the end of the file:**
+    - Command to access the *source.list* file: *sudo nano /etc/apt/sources.list*
+    - Add the following lines bellow:
+      - *deb http://ftp.cn.debian.org/debian sid main contrib non-free*
+      - *deb-src http://ftp.cn.debian.org/debian sid main contrib non-free*
 
-4. **Acessar https://caffe.berkeleyvision.org/install_apt.html**
+4. **Access:** <span><a href="https://caffe.berkeleyvision.org/install_apt.html" target="_blank">Caffe Ubuntu Installation</a></span>
 
-5. **Executar:**
-    
-    - sudo apt build-dep caffe-cpu        # dependencies for CPU-only version
-    - sudo apt build-dep caffe-cuda       # dependencies for CUDA version
-    
-    - Caso dê problema com overwrite do cublas.h executar o comando abaixo:
-    > sudo dpkg -i --force-overwrite /var/cache/apt/archives/cuda-cublas-9-1_9.1.85.3-1_amd64.deb    
+5. **Choose and execute:**
+    ```
+    sudo apt build-dep caffe-cpu        # dependencies for CPU-only version
+    sudo apt build-dep caffe-cuda       # dependencies for CUDA version
+    ```
+        
+    - If you receive a file replacement error related to the cublas.h file, run the command below:
+      - sudo dpkg -i --force-overwrite /var/cache/apt/archives/cuda-cublas-9-1_9.1.85.3-1_amd64.deb    
 
 6. **Baixar o projeto do Caffe do GitHub da Berkeley**
     > Repositório: https://github.com/BVLC/caffe
@@ -72,4 +72,7 @@ Python 3: pip3 install -r caffe_requirements.txt
     - export PYTHONPATH=/home/mfcs/caffe/python:$PYTHONPATH
 13. **Executar o pycaffe.py**
     - No diretório raiz do projeto do Caffe, executar o seguinte comando: **make pycaffe** 
+    
+### Comando para monitorar o uso da GPU no terminal:
+> *watch -n 1 nvidia-smi*
 
