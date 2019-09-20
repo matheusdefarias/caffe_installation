@@ -14,13 +14,13 @@ Python 3: pip3 install -r caffe_requirements.txt
 ### Instructions to Caffe Compilation *from source*:
 
 1. **Adjustments on Linux GPU driver** 
- - **On Software & Updates**
-    - On the ***Ubuntu Software*** tab mark the check box **source code** and on *Download from* choose **Main server**.
-    - On the ***Developer Options*** tab, mark the check box **Pre-released updates**.
-    - On the ***Additional Drivers*** tab, select the most recent graphics card driver and then click on **Apply changes**.
- - **After that, execute the following commands below:** 
-    - sudo apt update
-    - sudo apt upgrade   
+   - **On Software & Updates**
+     - On the ***Ubuntu Software*** tab mark the check box **source code** and on *Download from* choose **Main server**.
+     - On the ***Developer Options*** tab, mark the check box **Pre-released updates**.
+     - On the ***Additional Drivers*** tab, select the most recent graphics card driver and then click on **Apply changes**.
+   - **After that, execute the following commands below:** 
+     - sudo apt update
+     - sudo apt upgrade   
 
 2. **Install the CUDA Toolkit. Download it from Nvidia website in the .run(local) format**.
     - CUDA Toolkit: <span><a href="https://developer.nvidia.com/cuda-toolkit" target="_blank">CUDA Toolkit</a></span>
