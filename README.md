@@ -50,34 +50,37 @@ Python 3: pip3 install -r caffe_requirements.txt
 7. **Follow the compilation and test instructions.**
     > <span><a href="https://caffe.berkeleyvision.org/installation.html#compilation" target="_blank">Caffe compilation and test instructions</a></span>
 
-8. **Configurar o arquivo Makefile.config**
-    - Descomentar USE_CUDNN := 1 (Linha 5) 
-    - Ajustar versão do OpenCV (Linha 23)
-    - Ajustar diretório do CUDA (Linha 30)
-    - Comentar as linhas da arquitetura do CUDA dependendo da versão do CUDA (Linhas 39 e 40)
-    - BLAS:= open (Linha 53)
-    - Ajustar versão do Python (Linhas 81, 82 e 83)
-    - Incluir as seguintes linhas nas linhas 97 e 98:
-    - INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
-    - LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/
+8. **Before compile the Caffe Project, configure the Makefile.config file following the hints below:**
+    - If you will use CUDNN, uncomment USE_CUDNN := 1 (Line 5) 
+    - Adjust the OpenCV version (Line 23)
+    - Adjust the CUDA directory on your linux system (Line 30)
+    - Comment the lines of CUDA's architecture depending on the CUDA version that you are using (Lines 39 and 40)
+    - Set BLAS:= open (Line 53)
+    - Adjust the Python version (Lines 81, 82 e 83)
+    - Include the following lines on lines 97 and 98:
+        - INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
+        - LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/
     
-9. **Instalar OpenBlas**
-    - sudo apt install liblapack-dev liblapack3 libopenblas-base libopenblas-dev
+9. **Install *OpenBlas***
+    > sudo apt install liblapack-dev liblapack3 libopenblas-base libopenblas-dev
     
-10. **Instalar o python-numpy**
-    - sudo apt-get install python-numpy
+10. **Install *python-numpy***
+    > sudo apt-get install python-numpy
     
-11. **Executar os comandos para compilação e teste:**
-    - make all -j8
-    - make test
-    - make runtest
+11. **Execute the following commands to compile and test the Caffe Project:**
+    ```
+    make all -j8
+    make test
+    make runtest
+    ```
     
-12. **Executar o comando export abaixo:**
-    - export PYTHONPATH=/home/mfcs/caffe/python:$PYTHONPATH
+12. **Execute the *EXPORT* command below:**
+    > export PYTHONPATH=/home/mfcs/caffe/python:$PYTHONPATH
     
-13. **Executar o pycaffe.py**
-    - No diretório raiz do projeto do Caffe, executar o seguinte comando: **make pycaffe** 
+13. **Run the *pycaffe.py* file**
+    > No diretório raiz do projeto do Caffe, executar o seguinte comando: **make pycaffe** 
     
-### Comando para monitorar o uso da GPU no terminal:
+## Usefull commands
+- Command to monitoring the GPU usage in real time on terminal:
 > *watch -n 1 nvidia-smi*
 
