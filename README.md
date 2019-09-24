@@ -75,10 +75,10 @@ Python 3: pip3 install -r caffe_requirements.txt
     ```
     
 12. **Execute the *EXPORT* command below:**
-    > export PYTHONPATH=/home/mfcs/caffe/python:$PYTHONPATH
+    > export PYTHONPATH=/home/[user]/[caffe_directory]/python:$PYTHONPATH
     
 13. **Run the *pycaffe.py* file**
-    > No diretório raiz do projeto do Caffe, executar o seguinte comando: **make pycaffe** 
+    > In the root directory of the Caffe project, run the following command: **make pycaffe** 
     
 ## Usefull commands
 - Command to monitoring the GPU usage in real time on terminal:
