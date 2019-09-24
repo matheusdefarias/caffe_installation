@@ -82,5 +82,5 @@ Python 3: pip3 install -r caffe_requirements.txt
     
 ## Usefull commands
 - Command to monitoring the GPU usage in real time on terminal:
-> *watch -n 1 nvidia-smi*
+    > *watch -n 1 nvidia-smi*
 
